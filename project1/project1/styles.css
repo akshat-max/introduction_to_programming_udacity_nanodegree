@@ -1,0 +1,92 @@
+.card {
+  /* Closest font I can find that looks like prototype's. */
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+
+  /* Makes card smaller than viewport, looks more like a card than a screen. */
+  margin: 10%;
+  /* More appropriate width for a card. */
+  max-width: 500px;
+
+  /* Makes card float out of page. */
+  border: 1px solid #ddd;
+  padding: 3%;
+  box-shadow: 0 5px 5px 1px #eee;
+
+  /* Colors card background, but leaves important info clear agaisnt white. */
+  background: linear-gradient(0, #4e3f3f, rgb(255, 255, 255) 30%, white 90%, #534949);
+}
+
+h3 {
+  /* Spacing and sizing to match prototype's. */
+  margin: 0 0 2% 1%;
+  font-size: 200%;
+}
+
+.image {
+  /* Spacing and sizing to match prototype's. */
+  margin-bottom: 3%;
+  /* Image width is at most 300px. Hmm. Doesn't seem to work. */
+  max-width: 300px;
+}
+
+.info {
+  /* Box up info segment. */
+  border: 2px solid #ddd;
+  /* Spacing to match prototype's. */
+  padding: 4%;
+}
+
+.interesting-fact {
+  font-style: italic;
+  /* Spacing and sizing to match prototype's. */
+  margin: 0;
+}
+
+.facts-list {
+  font-style: italic;
+  /* Style the list to match prototype's. */
+  padding: 0;
+  list-style: none;
+}
+
+.label {
+  /* Heavier font weight to match prototype's. */
+  font-weight: 700;
+  /* Watch out. Labels are not italicized! */
+  font-style: normal;
+}
+/* Easier to maintain. Form fields contain only data. */
+/* Removed the ':' and ' ' from HTML. */
+.label::after {
+  content: ": ";
+}
+
+/* Draw a subtle box for footnote, where I place attributions. */
+.footnote {
+  /* Subtler than black. */
+  color: #555;
+  /* Italics and smaller, indicating "just FYI". */
+  font-style: italic;
+  font-size: smaller;
+  /* Box border is subtler than the other boxes'. */
+  border: 1px solid #eee;
+
+  /* Apply reasonable spacing for readability. */
+  padding: 1%;
+
+  /* Experimenting with cascading rules. Didn't work! */
+  /* I still needed to explicitly tell child elements to inherit. */
+  margin: 0;
+}
+
+.footnote p {
+  margin: inherit;
+  /* Is there not a better way? */
+  /* Can we avoid typing that "inherit"? */
+}
+
+.footnote p a {
+  /* The default blue color for links is too jarring in the footnote. */
+  color: inherit;
+}
